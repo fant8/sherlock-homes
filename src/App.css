@@ -1,0 +1,116 @@
+.app {
+  background: rgb(241, 241, 241);
+  min-height: 100vh;
+  margin-top: 0;
+  width:100%;
+  padding-top: 0;
+  padding-right: 10px;
+}
+
+#outer{
+  width:100%;
+  height: 135vh;
+  background: rgb(241, 241, 241);
+
+}
+
+#inner{
+  background-color: rgb(156, 154, 154);
+  width:1200px;
+  height:auto;
+  padding:15px;
+  margin: 0 auto;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px;
+}
+
+h2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+h3{
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+h5{
+  text-align: center;
+  font-family:'Josefin Sans', sans-serif;
+  font-weight: 200;
+}
+
+label{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  margin: 10;
+  display: inline-block;
+}
+
+.center{
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.button{
+  background-color: darkblue;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Josefin Sans', 'sans-serif';
+  color:white;
+  padding: 7px 8px;
+  margin-right: 10px;
+}
+
+
+.img{
+  width: 60%; 
+  height: auto;
+  padding: 0;
+  margin-bottom: 0;
+  
+}
+
+.box{
+  background-color: rgb(156, 154, 154);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width:1000px;
+}
+
+.checkBox{
+  margin: 5px;
+}
+
+.label{
+  margin: 5px;
+  font-weight: 100;
+}
+
+.red{
+  color: red;
+}
+
+#checkbox2{
+  font-weight: 100;
+  float: left;
+ 
+}
+#checkbox2 input{
+  margin-right: 5px;
+  margin-left: 10px;
+
+}
