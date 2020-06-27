@@ -29,17 +29,9 @@ function App() {
       setEmpty("Please select a checkbox.");
     }else{
       history.push('/results');
-      submitted = true;
     }
   }
 
-  const returnRedirect = () => {
-    console.log("test");
-    if(submitted){
-      return <Redirect to="/results"/>;
-    }
-    
-  }
 
   const addRange = (label, value) => {
     importances.set(label, value);
@@ -48,7 +40,6 @@ function App() {
 
   return (
     <div id="outer">
-      {returnRedirect()}
       
       <h1>Sherlock Homes</h1>
       <h5>Let us help you find a new Canadian city to call home.</h5>
