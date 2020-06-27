@@ -1,14 +1,13 @@
 import React, { Component, useState } from 'react';
-import { Redirect, Route, BrowserRouter as Router, Switch, HashRouter, NavLink, Link } from 'react-router-dom';
+import { Redirect, Route, BrowserRouter as Router, Switch, HashRouter, NavLink, Link, useHistory } from 'react-router-dom';
 import './App.css';
 import logo from './unnamed.png';
 import Checkbox from './Checkbox';
 import Range from './Range';
 import { Button } from 'react-bootstrap';
-import history from './History';
 
 function App() {
-
+  const history = useHistory();
   const [isEmpty, setEmpty] = useState("");
 
   var selectedCheckboxes = new Set();
@@ -38,8 +37,6 @@ function App() {
     console.log("test");
     if(submitted){
       return <Redirect to="/results"/>;
-    }else{
-      
     }
     
   }
