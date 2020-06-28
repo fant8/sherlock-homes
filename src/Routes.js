@@ -14,8 +14,8 @@ class Routes extends Component{
         return (
             <Router history={history}>
                 <Switch>
-                    <Route path="/" exact component={withRouter(App)} />
-                    <Route path="/results" component={withRouter(Results)} />
+                    <Route path="/" exact component={App} />
+                    <Route path="/results" component={Results} />
                 </Switch>
             </Router>
         )

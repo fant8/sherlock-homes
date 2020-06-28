@@ -13,8 +13,6 @@ function App() {
   var selectedCheckboxes = new Set();
   var importances = new Map();
 
-  var submitted = false;
-
   const toggleCheckbox = label => {
     if (selectedCheckboxes.has(label)) {
       selectedCheckboxes.delete(label);
@@ -28,7 +26,7 @@ function App() {
     if (selectedCheckboxes.size === 0){
       setEmpty("Please select a checkbox.");
     }else{
-      history.push('/results');
+      history.push({pathname:"/results", state: { value: "test", checkboxes: selectedCheckboxes, ranges: importances}});
     }
   }
 
