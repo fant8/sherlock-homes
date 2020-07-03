@@ -1,12 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import history from "./History";
-import Home from "./Home";
-import Results from "./Results";
-import { withRouter, Redirect, Route, BrowserRouter as Router, Switch, HashRouter, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from "./Routes"
 
 ReactDOM.render(

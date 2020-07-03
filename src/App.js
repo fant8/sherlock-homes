@@ -1,10 +1,10 @@
-import React, { Component, useState } from 'react';
-import { Redirect, Route, BrowserRouter as Router, Switch, HashRouter, NavLink, Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
 import './App.css';
 import logo from './unnamed.png';
 import Checkbox from './Checkbox';
 import Range from './Range';
 import { Button } from 'react-bootstrap';
+import { useHistory } from "react-router-dom";
 
 function App() {
   const history = useHistory();
