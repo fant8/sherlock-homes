@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import history from "./History";
-import Home from "./Home";
 import Results from "./Results";
-import { withRouter, Redirect, Route, BrowserRouter as Router, Switch, HashRouter, NavLink } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 class Routes extends Component{
     render() {
