@@ -7,7 +7,6 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 class Routes extends Component{
     render() {
-        console.log(history);
         return (
             <Router history={history}>
                 <Switch>

@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Results(props){
 
+    const [result, setResult] = useState("");
+
     const barrie = fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0503568&topic=0&notes=0&stat=0');
-    barrie.then(res => res.text()).then(res => console.log(JSON.parse(res.substring(2)))).catch(rej => console.log(rej));
+    barrie.then(response => response.text()).then(response => response.substring(2)).then(data => setResult(JSON.parse(data)));
+
+
+    //ontario
+    /*
+    let temp = 0;
+    const barrie = fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0503568&topic=0&notes=0&stat=0');
+    barrie.then(res => res.text()).then(res => res.substring(2)).then(data => temp = data).then(() => console.log(JSON.parse(temp)));
    
+    console.log(temp);
+    */
+
+    /*
     const belleville = fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0503522&topic=0&notes=0&stat=0');
     belleville.then(res => res.text()).then(res => console.log(JSON.parse(res.substring(2)))).catch(rej => console.log(rej));
     
@@ -97,6 +110,9 @@ function Results(props){
 
     const woodstock = fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0504544&topic=0&notes=0&stat=0');
     woodstock.then(res => res.text()).then(res => console.log(JSON.parse(res.substring(2)))).catch(rej => console.log(rej));
+    */
+    //quebec
+
 
     return(
         <div>
