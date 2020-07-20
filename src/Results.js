@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Results(props){
+    useEffect(() => {
+        fetchBarrie();
+    },[]);
 
-    const [result, setResult] = useState("");
+    const [result, setResult] = useState([]);
+
+    const fetchBarrie = async () => {
+
+        const data = await fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0503568&topic=0&notes=0&stat=0');
+        const data2 = await data.text();
+        const data3 = JSON.parse(data2.substring(2));
+        console.log(data3);
+        setResult(data3.DATA);
+    }
+
+    /*
+    const [result, setResult] = useState([]);
 
     const barrie = fetch('https://www12.statcan.gc.ca/rest/census-recensement/CPR2016.json?lang=E&dguid=2016S0503568&topic=0&notes=0&stat=0');
     barrie.then(response => response.text()).then(response => response.substring(2)).then(data => setResult(JSON.parse(data)));
 
+    console.log(result);
 
     //ontario
     /*
@@ -117,6 +133,7 @@ function Results(props){
     return(
         <div>
             <h1>{props.location.state.value}</h1>
+            {result.map(items => (<h1>{items[0]}</h1>))}
         </div>
     );
 
