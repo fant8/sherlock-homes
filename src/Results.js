@@ -6,6 +6,8 @@ function Results(props){
     },[]);
 
     const [result, setResult] = useState([]);
+    const [numAsian, setAsian] = useState([]);
+    const [numAbor, setAbor] = useState([]);
 
     const fetchBarrie = async () => {
 
@@ -14,6 +16,10 @@ function Results(props){
         const data3 = JSON.parse(data2.substring(2));
         console.log(data3);
         setResult(data3.DATA);
+    }
+
+    const parseBarrie = () => {
+        result.map(x => ((x[10]==="  Aboriginal identity") ? setAbor(x[13]): console.log("no")));    
     }
 
     /*
@@ -132,8 +138,10 @@ function Results(props){
 
     return(
         <div>
+            {parseBarrie()}
             <h1>{props.location.state.value}</h1>
-            {result.map(items => (<h1>{items[0]}</h1>))}
+            <h1>{numAsian}</h1>
+            {result.map(items => (<h2>{items[10]}, {items[13]}</h2>))}
         </div>
     );
 

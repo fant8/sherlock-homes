@@ -73,17 +73,19 @@ function App() {
         <Range label="costRange" handleRangeChange={addRange} />
         <br></br><br></br>
 
-        <h3>Ethnic Groups</h3>
+        <h3>Ethnic Origins</h3>
 
-        <Checkbox label="East Asian" handleCheckboxChange={toggleCheckbox} key="eastAsian" />
+        <Checkbox label="Europe" handleCheckboxChange={toggleCheckbox} key="european" />
 
-        <Checkbox label="South East Asian" handleCheckboxChange={toggleCheckbox} key="southEastAsian" />
+        <Checkbox label="Asian" handleCheckboxChange={toggleCheckbox} key="asian" />
 
-        <Checkbox label="African" handleCheckboxChange={toggleCheckbox} key="african" />
+        <Checkbox label="Africa" handleCheckboxChange={toggleCheckbox} key="african" />
 
-        <Checkbox label="Latino/Hispanic" handleCheckboxChange={toggleCheckbox} key="latin" />
+        <Checkbox label="Americas" handleCheckboxChange={toggleCheckbox} key="americas" />
 
-        <Checkbox label="Native American" handleCheckboxChange={toggleCheckbox} key="nativeAmerican" />
+        <Checkbox label="Oceania and other" handleCheckboxChange={toggleCheckbox} key="other" />
+
+        <Checkbox label="Aboriginal" handleCheckboxChange={toggleCheckbox} key="other" />
         <br></br>
 
         <Range label="ethnicityRange" handleRangeChange={addRange} />
